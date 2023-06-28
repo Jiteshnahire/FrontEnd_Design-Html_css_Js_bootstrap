@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    
+
+<header>
+<nav>
+    <div class="logo">
+        Photo<span>pi</span>X
+
+    </div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="icon">
+        <i class="fa fa-search"></i>
+        <a href="#">Login</a>
+
+
+    </div>
+</nav>
+<section class="h-text">
+    <i class="fa fa-camera" id="camera"></i>
+    <h1>Capturing the moments that captivate your heart.</h1>
+    <input type="text" name="" placeholder="Search here...">
+    <button><i class="fa fa-search"></i></button>
+</section>
+</header>
+<section class="filter-gallery">
+    <div class="portfolio-menu">
+        <ul>
+            <li class="active" data-filter="*"> All</li>
+            <li data-filter=".nature">Nature</li>
+            <li data-filter=".fashion">Fashion</li>
+            <li data-filter=".wedding">Wedding</li>
+        </ul>
+    </div>
+    <div class="portfolio-item">
+        <div class="item nature">
+            <img src="img/p1.jpg" width="100" height="100">
+        </div>
+        <div class="item fashion">
+            <img src="img/p2.jpg" width="100" height="100">
+        </div>
+        <div class="item wedding">
+            <img src="img/p3.jpg" width="100" height="100">
+        </div>
+        <div class="item nature">
+            <img src="img/p4.jpg" width="100" height="100">
+        </div>
+        <div class="item fashion">
+            <img src="img/p5.jpg" width="100" height="100">
+        </div>
+        <div class="item wedding">
+            <img src="img/p6.jpg" width="100" height="100">
+        </div>
+        <div class="item nature">
+            <img src="img/p7.jpg" width="100" height="100">
+        </div>
+        <div class="item fashion">
+            <img src="img/p8.jpg" width="100" height="100">
+        </div>
+        <div class="item wedding">
+            <img src="img/p9.jpg" width="100" height="100">
+        </div>
+    </div>
+</section>
+
+<section class="member">
+    <div class="member-info">
+        <h1>Our <span>Information</span></h1>
+        <p>What our member says</p>
+    </div>
+    <div class="member-card">
+        <img src="img/member.png">
+        <p>
+            I think these nature letters are short reports of original research that were 
+            focussed on an outstanding finding whose importance means that it will be.
+        </p>
+        <h2>* Maria Sharapove</h2>
+        <img src="img/icon1.png" width="100">
+        <img src="img/icon2.png" width="100">
+        <img src="img/icon3.png" width="100">
+        <img src="img/icon4.png" width="100">
+    </div>
+
+    <div class="m-images">
+        <img src="img/s1.jpg">
+        <img src="img/s2.jpg">
+        <img src="img/s3.jpg">
+        <img src="img/s4.jpg">
+        <img src="img/s5.jpg">
+        <img src="img/s6.jpg">
+    </div>
+</section>
+
+<footer>
+    <div class="newsletter">
+        <div>
+            <h2>Subscribe our newsletter</h2>
+            <p>we are team of non-cynics who truly care for our work.</p>
+        </div>
+        <div class="ntext">
+            <label>
+                <input type="text" name="" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </label>
+        </div>
+
+    </div>
+    <div class="f-contact">
+        <div>
+            <h1>Information</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum fuga.</p>
+        </div>
+        <div>
+            <h1>Useful links</h1>
+            <p>About us</p>
+            <p>Gallery</p>
+            <p>Blog posts</p>
+            <p>Pricing plans</p>
+        </div>
+
+        <div>
+            <h1>Details</h1>
+            <p>Photographers</p>
+            <p>Gallery</p>
+            <p>About</p>
+            <p>Pricing plans</p>
+        </div>
+
+        <div>
+            <h1>Help & Support</h1>
+            <p>Privacy policy</p>
+            <p>Terms & condition</p>
+            <p>Technical support</p>
+            <p>Customer care</p>
+        </div>
+    </div>
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+    $('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+    $('.portfolio-menu ul li').click(function(){
+    $('.portfolio-menu ul li').removeClass('active');
+    $(this).addClass('active');   
+    
+    var selector=$(this).attr('data-filter');
+    $('.portfolio-item').isotope({
+        filter:selector
+
+    });
+    return false;
+
+    });
+</script>
+</body>
+</html>
